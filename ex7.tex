@@ -1,0 +1,57 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+
+\newtheorem{case}{Случай}
+
+\usepackage{geometry} % Простой способ задавать поля (из шаблонов курса)
+\geometry{top=25mm}
+\geometry{bottom=35mm}
+\geometry{left=35mm}
+\geometry{right=20mm}
+
+%% Resetting case counter when section counter is changed
+\makeatletter
+\@addtoreset{case}{section}
+\makeatother
+
+\begin{document}
+
+\section{Три девицы под окном}
+\begin{case} Кабы я была царица, "---
+Говорит одна девица, "---
+То на весь крещеный\\ мир
+Приготовила б я пир.
+\end{case}
+
+\begin{case}
+Кабы я была царица, "---
+Говорит ее сестрица, "---
+То на весь бы мир\\ одна
+Наткала я полотна.
+\end{case}
+
+\begin{case}
+Кабы я была царица, "---
+Третья молвила сестрица, "---
+Я б для батюшки-\\ царя
+Родила богатыря.
+\end{case}
+
+\section{Камень}
+\begin{case}
+Направо пойдешь "--- жену найдёшь
+\end{case}
+
+\begin{case}
+Налево "--- коня потеряешь
+\end{case}
+
+\begin{case}
+Прямо "--- сам пропадёшь
+\end{case}
+\end{document}

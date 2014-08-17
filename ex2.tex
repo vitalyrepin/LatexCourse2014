@@ -1,0 +1,22 @@
+\documentclass[leqno,a4paper]{article}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+%% F(\tau)
+\newcommand{\myf}{\digamma\left(\tau\right)}
+
+%% F(\tau) exp{-F(\tau) t} dt
+\newcommand{\myef}[1]{\myf e^{-\myf t_#1}dt_#1}
+
+%% e^{-1/2}
+\newcommand{\myeh}{e^{-1/2}}
+
+\begin{multline}
+\Pr\left(\myf\right) \propto \sum_{i=4}^{12}\left(\prod_{j=1}^i\left(\int_0^5 \myef{j}\right)\prod_{k=i+1}^{12}\left(\int_5^\infty\myef{k}\right)C_{12}^i\right)\propto\\
+\propto\sum_{i=4}^{12}\left(-\myeh+1\right)^i\left(\myeh\right)^{12-i}C_{12}^i \approx 0.7605, \quad \forall \tau \ne \bar\tau\quad\quad\quad
+\end{multline}
+
+\end{document}

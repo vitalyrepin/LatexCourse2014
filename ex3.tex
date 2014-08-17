@@ -1,0 +1,31 @@
+\documentclass[a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{cmap}
+\usepackage{tabularx}
+\usepackage{geometry} % Простой способ задавать поля
+
+\pagestyle{empty}
+
+\frenchspacing
+
+%% From course templates
+\geometry{top=25mm}
+\geometry{bottom=35mm}
+\geometry{left=35mm}
+\geometry{right=20mm}
+
+\begin{document}
+
+%% OK, not exactly the same as in the example. However, I hope it is close enough.
+\begin{tabularx}{\textwidth}{X|p{3cm}|X}
+\bf \rightline{\bf Сертификат} \rightline{\bf об окончании} & \bf Сертификат об\newline окончании с отличием & \bf Подтвержденный\newline сертификат\\
+\hline
+\hline
+В течение курса студентам будут предложены 4 теста и 1 финальное взаимнооцениваемое задание \emph{(peer assessment).}\newline  Каждый тест составляет 25~\% от итоговой оценки, при этом в формулу ее расчета идут только 3 лучшие теста из 4.\newline Таким образом, тесты в сумме составляют 75~\% от итоговой оценки.\newline Взаимнооцениваемое задание составляет
+25~\% от итоговой оценки.\newline Для получения сертификата об окончании необходимо набрать не менее \textbf{60~\%} от максимально возможного балла.& 
+Для получения необходимо набрать не менее \textbf{80~\%} от максимально возможного балла.&
+Система оценивания та же.\newline Для получения подтвержденного сертификата необходимо набрать не менее \textbf{60~\%} от максимально возможного балла, для получения подтвержденного сертификата с отличием \emph{(Verified Certificate with Distinction)} необходимо набрать не менее \textbf{80~\%} от максимально возможного балла.
+\end{tabularx}
+\end{document}

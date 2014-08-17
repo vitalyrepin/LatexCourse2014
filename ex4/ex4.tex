@@ -1,0 +1,19 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{enumerate}
+%% Картинка с ее исходным размером.
+\item \includegraphics{filename}
+%% Картинка, имеющая размер в 2 раза меньше.
+\item \includegraphics[scale=0.5]{filename}
+%% Картинка, имеющая высоту 4 см и такие же пропорции, что и исходная картинка.
+\item \includegraphics[height=4cm,keepaspectratio]{filename}
+%% Картинка, имеющая ширину 2 см и высоту 4 см.
+\item \includegraphics[height=4cm,width=2cm]{filename}
+%% Картинка, имеющая ширину в 10% от ширины текста.
+\item \includegraphics[width=.1\textwidth]{filename}
+\end{enumerate}
+
+\end{document}

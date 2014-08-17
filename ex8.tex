@@ -1,0 +1,37 @@
+\documentclass{beamer}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\begin{document}
+
+\newcommand{\myname}[2]{edge from parent node[below,sloped] {\small\textsf{#1}} node [above,sloped] {\small\textsf{#2}}}
+
+%% Generates tikz picture for the frame
+%% Args:
+%% #1: Color for "pay and report"
+%% #2: Color for "b=0/no bribe"
+\newcommand{\genframe}[2]{
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[grow=right,level 1/.style={sibling distance=8em},
+level 2/.style={sibling distance=7em}, level distance=4cm]
+\node {Official} % root
+  child { node {} \myname{\textcolor{#2}{no bribe}}{\textcolor{#2}{$b=0$}} }
+  child { node {Citizen}
+    child {node {} \myname{silently}{refuse} }
+    child {node {} \myname{silently}{pay} }
+    child {node {} \myname{\textcolor{#1}{and report}}{\textcolor{#1}{pay}} }
+    \myname{bribe}{$b>0$}
+  };
+\end{tikzpicture}
+\end{center}
+\end{frame}
+}
+
+%% Fast hack. Probably beamer can do it in more elegant way but I have only 50 mins before deadline :-)
+\genframe{black}{black}
+\genframe{red}{black}
+\genframe{red}{red}
+
+\end{document}
